@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "ted-procurement": {
+      "command": "ted-mcp"
+    }
+  }
+}
