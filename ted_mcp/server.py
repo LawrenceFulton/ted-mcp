@@ -151,7 +151,7 @@ async def get_notice(ctx: Context, publication_number: str) -> str:
     ted: TEDClient = ctx.request_context.lifespan_context.ted_client
 
     # Fetch extra fields for detail view
-    detail_fields = list(dict.fromkeys(AWARD_FIELDS + ["procedure-type", "lots-number"]))
+    detail_fields = list(dict.fromkeys(AWARD_FIELDS + ["procedure-type"]))
 
     try:
         data = await ted.search(
@@ -220,9 +220,6 @@ async def get_notice(ctx: Context, publication_number: str) -> str:
             lines.append(f"{i}. {w['name']}{country_str}")
     else:
         lines.append("No winner data available (may not be a contract award notice).")
-
-    if n.get("lots-number"):
-        lines.append(f"\n**Number of Lots:** {n.get('lots-number')}")
 
     return "\n".join(lines)
 
