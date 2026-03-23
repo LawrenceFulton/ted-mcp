@@ -5,7 +5,7 @@ compatibility_flags = ["nodejs_compat"]
 
 [durable_objects]
 bindings = [
-  { name = "TED_MCP", class_name = "TedMCP" }
+  { name = "MCP_OBJECT", class_name = "TedMCP" }
 ]
 
 [[migrations]]

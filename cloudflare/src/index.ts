@@ -295,7 +295,9 @@ function formatNoticesMarkdown(results: NoticeSearchResult[], total: number, que
 
 // ============ MCP Agent ============
 
-export interface Env {}
+export interface Env {
+  MCP_OBJECT: DurableObjectNamespace;
+}
 
 export class TedMCP extends McpAgent<Env> {
   server = new McpServer({
