@@ -1,0 +1,13 @@
+name = "ted-mcp"
+main = "src/index.ts"
+compatibility_date = "2025-03-01"
+compatibility_flags = ["nodejs_compat"]
+
+[durable_objects]
+bindings = [
+  { name = "TED_MCP", class_name = "TedMCP" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["TedMCP"]
