@@ -23,3 +23,8 @@ env/
 # IDE
 .vscode/
 .idea/
+
+
+
+*/node_modules/
+*/.wrangler/
