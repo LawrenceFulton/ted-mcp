@@ -29,5 +29,7 @@ env/
 */node_modules/
 */.wrangler/
 
-# d.ts
-*.d.ts
+# Auto-generated files
+cloudflare/worker-configuration.d.ts
+cloudflare/src/nuts_data.ts
+NutsCodes.xlsx

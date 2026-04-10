@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "generate-nuts": "node scripts/generate-nuts-data.mjs",
+    "dev": "npm run generate-nuts && wrangler dev",
+    "deploy": "npm run generate-nuts && wrangler deploy",
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
